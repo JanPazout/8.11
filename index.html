@@ -2,9 +2,173 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobazar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+<div class="container text-center">
+    <style>
+  /* Styl pro seznam */
+  ol {
+    text-align: left; /* Zarovnání seznamu na levou stranu */
+  }
+</style>
 
+<h1> Vitejte v autobazaru</h1>
+<h3>Zde jsou vsechny informace</h3>
+
+    <!-- ================================================================================ -->
+
+<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsableContent">
+        Proc si vybrat zrovna nas?
+</button>
+
+<div class="collapse" id="collapsableContent">
+        <p>
+            <ol>
+                <li>Dobre ceny</li>
+                <li>Prijemny personal</li>
+                <li>Rychle vam se vsim pomuzeme</li>
+            </ol>
+        </p>
+</div>
+
+    <!-- ================================================================================ -->
+
+<div class="accordion" id="myAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="section1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sectionContent1" aria-expanded="true" aria-controls="sectionContent1">
+                Pujceni auta
+            </button>
+        </h2>
+        <div id="sectionContent1" class="accordion-collapse collapse show" aria-labelledby="section1" data-bs-parent="#myAccordion">
+            <div class="accordion-body">
+                <ol>
+                    <li>Penize predem + zaloha</li>
+                    <li>Nechate nam kontakt</li>
+                    <li>Cena se odviji podle doby pujceni</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="accordion" id="mAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="section2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sectionContent2" aria-expanded="false" aria-controls="sectionContent2">
+                    Vraceni auta
+                </button>
+            </h2>
+            <div id="sectionContent2" class="accordion-collapse collapse" aria-labelledby="section2" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                    <ol>
+                        <li>Musite splnit datum vraceni</li>
+                        <li>Pokud nesplnite, kazda hodina je pokuta 500kc</li>
+                        <li>V pripade prodlouzeni, me kontaktujte</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================================ -->
+
+    <div style="width: 300px; height: 150px; margin: 0 auto; text-align: center;">
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/2017_Honda_Civic_EX_VTEC_CVT_1.0_Front.jpg" style="width: 300px; height: 150px;" class="d-block w-100" alt="Hondisk">
+        </div>
+        <div class="carousel-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Toyota_Supra%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS1279%29.jpg" style="width: 300px; height: 150px;" class="d-block w-100" alt="Supreme">
+        </div>
+        <div class="carousel-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/FeliciaPrincezna.jpg" style="width: 300px; height: 150px;" class="d-block w-100" alt="Felinda">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+
+<!-- ================================================================================ -->
+
+<div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Dotazy
+</button>
+</div>
+
+<!-- ================================================================================ -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Otazky</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Na tento email muzete napsat potrebne dotazy: piskot@xDDDD.cz
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================================================================================ -->
+
+
+<div class="container">
+    <h2>Tabulka cen</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Jméno</th>
+            <th scope="col">Datum vyroby</th>
+            <th scope="col">Cena za pujceni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Honda Civic</td>
+            <td>2020</td>
+            <td>5000</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Skoda Felicia</td>
+            <td>2000</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Toyota Supra</td>
+            <td>2019</td>
+            <td>7000</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
 </body>
 </html>
